@@ -1,0 +1,76 @@
+<!-- base template by teppyslayouts.neocities.org -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>site title</title>
+	<link rel="stylesheet" type="text/css" href="style.css">  
+</head>
+<body>
+	<div class="wrapper">
+		<div class="site-title"><a href="/">picnic daydream (it is raining)</a></div>
+		<div class="site-subtitle">personal website</div>
+		<div class="header">
+			<div class="outside"></div>
+			<div class="window-frame"></div>
+			<div class="window-draggable-area">
+				<div class="window-left" id="window-left"></div>
+				<div class="window-right" id="window-right"></div>
+			</div>
+			<img src="boy.png" class="boy">
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a href="home.html" class="active" target="content">Home</a></li>
+				<li><a href="blog.html" class="" target="content">Blog</a></li>
+				<li><a href="about.html" class="" target="content">About</a></li>
+				<li><a href="links.html" class="" target="content">Links</a></li>
+			</ul>
+		</div>
+		<div class="main">
+			<div class="content">
+				<iframe name="content" src="home.html"></iframe>
+			</div>
+			<div class="sidebar">
+				<h3>Updates</h3>
+				<div><b>2022-07-11</b></div>
+				<div><a >Imported previous blog posts</a></div>
+				<div><b>2022-07-09</b></div>
+				<div><a >Software: 3 New Entries</a></div>
+				<div><b>2022-07-08</b></div>
+				<div><a >Software: 6 New Entries</a></div>
+				<h3>TODO</h3>
+				<ul class="checklist">
+					<li>Finish Man Without Qualities</li>
+					<li><s>24 page items (24/24)</s></li>
+				</ul>
+				<h3>Status</h3>
+				<b>Listening To</b><br>
+				<a target="_blank" href="https://www.youtube.com/watch?v=sTpsY9V0FEg">BENEE - Tough Guy (06/09)</a><br>
+				<b>Reading</b><br>
+				<a target="_blank" href="https://www.goodreads.com/en/book/show/527756.The_Man_Without_Qualities">Man Without Qualities (48%) (06/09)</a><br>
+				<b>Playing</b><br>
+				Osu (06/09)<br>
+			</div>
+		</div>
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="plain-draggable.min.js"></script>
+	<script type="text/javascript">
+		draggable = new PlainDraggable(document.getElementById('window-left'), {
+			zIndex: false
+		});
+		draggable = new PlainDraggable(document.getElementById('window-right'), {
+			zIndex: false
+		});
+
+		$('.menu a').click(function () {
+			$('.menu a').removeClass('active');
+			$(this).addClass('active');
+		});
+
+    </script>
+</body>
+</html>
