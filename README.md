@@ -1,1 +1,1 @@
-# Artymode.github.io
+# artymode.github.io
